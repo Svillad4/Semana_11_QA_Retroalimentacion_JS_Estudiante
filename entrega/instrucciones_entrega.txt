@@ -1,0 +1,8 @@
+INSTRUCCIONES DE ENTREGA
+
+1. Verifica que el proyecto corregido funcione en navegador.
+2. Verifica que no falten los documentos diligenciados en la carpeta docs.
+3. Guarda las evidencias en la carpeta evidencias.
+4. Comprime la carpeta completa en ZIP.
+5. Sube el ZIP a Moodle en la actividad correspondiente.
+6. Si el docente usa Foro o Workshop, publica también tu resumen de bugs y plan de mejora.

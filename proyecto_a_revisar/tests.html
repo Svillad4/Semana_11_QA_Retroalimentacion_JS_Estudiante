@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pruebas - Verificador comunitario</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .test-ok { color:#166534; font-weight:700; }
+    .test-fail { color:#991b1b; font-weight:700; }
+    pre { background:#0f172a; color:#e2e8f0; padding:14px; border-radius:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Pruebas funcionales del proyecto</h1>
+    <p>Estas pruebas ayudan a verificar validaciones, control de flujo y lógica de clasificación.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Resultado de pruebas</h2>
+      <div id="resultado-pruebas">Ejecutando pruebas...</div>
+    </section>
+
+    <section class="panel">
+      <h2>DOM mínimo para pruebas</h2>
+      <p>Estos campos permiten cargar <code>app.js</code> durante la prueba.</p>
+      <form id="form-registro">
+        <input id="nombre" />
+        <input id="telefono" />
+        <input id="edad" />
+        <input id="asistencia" />
+        <input id="actividades" />
+        <select id="taller"><option value=""></option></select>
+      </form>
+      <button id="btn-limpiar">Limpiar</button>
+      <div id="mensajes"></div>
+      <span id="total-registros"></span>
+      <span id="total-certificados"></span>
+      <span id="total-seguimiento"></span>
+      <table><tbody id="tbody-registros"></tbody></table>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/tests.js"></script>
+</body>
+</html>

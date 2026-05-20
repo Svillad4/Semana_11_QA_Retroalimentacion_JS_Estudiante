@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verificador de participación comunitaria</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>Verificador de participación comunitaria</h1>
+      <p>Proyecto de práctica para QA: validaciones, control de flujo, consola y corrección de bugs en JavaScript.</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Registro de participante</h2>
+      <p class="hint">El sistema debe validar datos, clasificar al participante y agregarlo a la tabla.</p>
+
+      <form id="form-registro" novalidate>
+        <div class="grid">
+          <label>
+            Nombre completo
+            <input id="nombre" type="text" placeholder="Ej. Ana Pérez" />
+          </label>
+
+          <label>
+            Teléfono
+            <input id="telefono" type="text" placeholder="10 dígitos" />
+          </label>
+
+          <label>
+            Edad
+            <input id="edad" type="number" placeholder="12 a 80" />
+          </label>
+
+          <label>
+            Asistencia (%)
+            <input id="asistencia" type="number" placeholder="0 a 100" />
+          </label>
+
+          <label>
+            Actividades completadas
+            <input id="actividades" type="number" placeholder="0 a 5" />
+          </label>
+
+          <label>
+            Taller
+            <select id="taller">
+              <option value="">Seleccione...</option>
+              <option value="huerta">Huerta escolar</option>
+              <option value="programacion">Programación web</option>
+              <option value="emprendimiento">Emprendimiento rural</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="btn-registrar">Registrar participante</button>
+          <button type="button" id="btn-limpiar">Limpiar</button>
+        </div>
+      </form>
+
+      <div id="mensajes" class="messages" aria-live="polite"></div>
+    </section>
+
+    <section class="panel metrics">
+      <h2>Indicadores</h2>
+      <div class="metric-grid">
+        <article>
+          <span id="total-registros">0</span>
+          <p>Total registros</p>
+        </article>
+        <article>
+          <span id="total-certificados">0</span>
+          <p>Certificados</p>
+        </article>
+        <article>
+          <span id="total-seguimiento">0</span>
+          <p>En seguimiento</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <h2>Participantes registrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Taller</th>
+            <th>Asistencia</th>
+            <th>Actividades</th>
+            <th>Estado</th>
+            <th>Cupo sugerido</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-registros"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
