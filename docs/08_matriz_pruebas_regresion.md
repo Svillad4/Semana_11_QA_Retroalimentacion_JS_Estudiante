@@ -17,7 +17,7 @@ Después de corregir bugs, ejecuta nuevamente estos casos para verificar que el 
 
 ## Resultado general
 
-- Total pruebas ejecutadas:
-- Total aprobadas:
+- Total pruebas ejecutadas: 2
+- Total aprobadas: 2
 - Total fallidas:
 - Observaciones:

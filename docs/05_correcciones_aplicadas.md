@@ -15,6 +15,7 @@ Registra las correcciones realizadas en el proyecto.
 Explica en un párrafo qué mejoró en el sistema después de aplicar las correcciones.
 
 **Respuesta:**
+Al aplicar las correcciones, el sistema mejoró significativamente en estabilidad y funcionamiento. Los formularios comenzaron a validar correctamente los datos, los botones y la tabla funcionaron de manera adecuada y los cálculos mostraron resultados correctos. Además, la integración entre HTML y JavaScript quedó mejor organizada, reduciendo errores en consola y mejorando la experiencia del usuario al usar la página 
 
 
 ## Riesgos que quedaron pendientes

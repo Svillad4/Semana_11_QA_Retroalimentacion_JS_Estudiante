@@ -1,0 +1,125 @@
+# REPORTE GENERAL DE BUGS Y VALIDACIÓN QA
+
+Fecha: 23 de mayo de 2026
+Estado actual: Corregido y funcional
+
+---
+
+## Introducción
+
+Durante el proceso de pruebas del sistema se realizó una revisión técnica completa utilizando pruebas manuales en navegador, consola del desarrollador (F12 y Control + Shift + J), validaciones funcionales y revisión del código JavaScript
+
+Gracias a este proceso se identificaron múltiples errores de lógica, integración y validación que afectaban directamente el funcionamiento del formulario, la tabla, los indicadores y el cálculo de resultados
+
+Todos los errores encontrados fueron corregidos posteriormente y el sistema quedó funcionando correctamente
+
+---
+
+# Resumen Ejecutivo de Bugs
+
+## Bugs más importantes encontrados
+
+### Bug 1 – Prioridad Alta – IDs HTML y JavaScript incorrectos
+
+Los IDs utilizados en JavaScript no coincidían con los IDs reales del HTML.
+Esto provocaba que el formulario, la tabla y el botón limpiar no funcionaran correctamente
+
+### Bug 2 – Prioridad Alta – Validación incorrecta de edad
+
+La validación utilizaba el operador AND (`&&`) en lugar de OR (`||`), haciendo imposible detectar edades fuera del rango permitido
+
+### Bug 3 – Prioridad Alta – Switch sin `break`
+
+La función encargada de calcular cupos ejecutaba todos los casos del `switch`, provocando que todos los talleres devolvieran el mismo resultado
+
+---
+
+# Otros bugs encontrados
+
+Validación incorrecta del teléfono
+Uso de `=` en lugar de `===`
+Comparación `>` en lugar de `>=`
+Error off-by-one en ciclos
+ Falta de `preventDefault()` en el formulario
+ Errores de integración entre HTML y JavaScript
+ Problemas de actualización en indicadores
+
+---
+
+# Correcciones aplicadas
+
+Después del análisis se realizaron las siguientes correcciones:
+
+Se corrigieron todos los IDs incorrectos
+Se mejoró la lógica de validaciones
+Se agregaron los `break` faltantes en los `switch`
+Se corrigieron comparaciones lógicas
+Se ajustaron ciclos y validaciones numéricas
+Se agregaron controles para evitar recargas innecesarias
+Se validó el funcionamiento correcto de tabla, indicadores y formularios
+---
+
+# Pruebas realizadas
+
+## Pruebas manuales
+
+Se realizaron pruebas directamente desde el navegador utilizando:
+
+Open Live Serve
+Herramientas de desarrollador
+Consola del navegador
+Registro manual de datos
+Validación de formularios
+Pruebas de botones y navegación
+
+## Pruebas automáticas
+
+También se ejecutaron pruebas desde consola utilizando funciones JavaScript para validar:
+
+Validaciones de edad.Validaciones de teléfono
+Clasificación de participantes
+Cálculo de cupos
+Generación de resúmenes
+Funcionamiento de indicadores
+
+---
+
+# Resultado después de las correcciones
+
+Después de aplicar todas las mejoras el sistema:
+
+Registra participantes correctamente
+Inserta filas en la tabla
+Calcula cupos correctamente
+Actualiza indicadores en tiempo real
+Valida correctamente los datos ingresados
+Funciona sin errores en consola
+ Tiene mejor organización y estabilidad
+
+---
+
+# Reflexión técnica
+
+Este proceso permitió entender mejor cómo funciona la depuración sistemática y la importancia de revisar cuidadosamente la integración entre HTML, CSS y JavaScrip
+
+También ayudó a mejorar el manejo de validaciones, eventos y lógica condicional. La retroalimentación y las pruebas constantes permitieron encontrar errores que inicialmente no eran visibles y mejorar significativamente la calidad del proyecto
+
+---
+
+# Mejoras futuras
+
+En futuras versiones se podrían implementar:
+
+Base de datos para guardar registros
+Sistema de inicio de sesión.Exportación de datos en PDF o Excel. Estadísticas gráfica
+Modo oscuro avanzado
+Filtros de búsqueda
+Mayor seguridad y validaciones automáticas
+
+---
+
+# Conclusión
+
+El proyecto pasó de tener errores críticos que bloqueaban su funcionamiento a convertirse en un sistema funcional y estable gracias al proceso de pruebas, depuración y corrección
+
+La experiencia permitió fortalecer habilidades de análisis, lógica y solución de problemas dentro del desarrollo web
